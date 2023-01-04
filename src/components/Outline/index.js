@@ -14,7 +14,7 @@ import {
 
 import NEPSE_LOGO from './images/NEPSE.png'
 
-const LoginForm = () => {
+const BoxForm = () => {
     return (
         <Flex width={"100vw"} height={"100vh"} alignContent={"center"} justifyContent={"center"}>
             <Center>
@@ -55,4 +55,4 @@ const LoginForm = () => {
     );
 };
 
-export default LoginForm;
+export default BoxForm;

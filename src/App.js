@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { ChakraProvider, extendTheme } from '@chakra-ui/react';
-import LoginForm from './components/Login';
+import BoxForm from './components/Outline';
 import "./index.css";
 
 const theme = extendTheme({
@@ -16,7 +16,7 @@ const theme = extendTheme({
 function App() {
   return (
     <ChakraProvider theme={theme}>
-      <LoginForm />
+      <BoxForm />
     </ChakraProvider>
   );
 };

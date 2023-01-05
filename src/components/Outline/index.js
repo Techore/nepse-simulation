@@ -49,8 +49,8 @@ const BoxForm = () => {
                         </Center>
                     </Stack>
 
-                    <RegisterForm />
-                    {/* <LoginForm /> */}
+                    {/* <RegisterForm /> */}
+                    <LoginForm />
                 </Box>
             </Center>
         </Flex >

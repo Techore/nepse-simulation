@@ -17,7 +17,7 @@ import {
 import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
 
 
-const LoginForm = () => {
+const LoginForm = (props) => {
     const [showPassword, setShowPassword] = useState(false);
 
     const handlePasswordVisibility = () => setShowPassword(!showPassword);
@@ -72,7 +72,7 @@ const LoginForm = () => {
                         <Button type='submit' bgColor={"#0078d7"} color={"white"} _hover={{ bg: "#0078d7" }}>Login</Button>
                     </Center>
                 </form>
-                <Button variant='link' bgColor={"white"} size="lg" color={"#0078d7"}>Do not have an account? Register here.</Button>
+                <Button variant='link' bgColor={"white"} size="lg" color={"#0078d7"} onClick={() => props.onFormSwitch('register')}>Do not have an account? Register here.</Button>
             </Stack>
         </Box>
     );

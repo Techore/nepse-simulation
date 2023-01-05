@@ -1,4 +1,4 @@
-import React from 'react';
+import { React, useState } from 'react';
 import {
     Image,
     Flex,
@@ -14,6 +14,12 @@ import RegisterForm from '../Register';
 import NEPSE_LOGO from './images/NEPSE.png';
 
 const BoxForm = () => {
+    const [currentForm, setCurrentForm] = useState('login');
+
+    const toggleForm = (formname) => {
+        setCurrentForm(formname);
+    }
+
     return (
         <Flex width={"100vw"} height={"100vh"} alignContent={"center"} justifyContent={"center"}>
             <Center>
@@ -48,9 +54,8 @@ const BoxForm = () => {
                             </VStack>
                         </Center>
                     </Stack>
-
-                    {/* <RegisterForm /> */}
-                    <LoginForm />
+                    {currentForm === "login" ? <LoginForm onFormSwitch={toggleForm} /> : <RegisterForm onFormSwitch={toggleForm} />}
+                    {console.log(currentForm)}
                 </Box>
             </Center>
         </Flex >

@@ -13,7 +13,7 @@ import {
 } from '@chakra-ui/react';
 
 
-const RegisterForm = () => {
+const RegisterForm = (props) => {
 
     const [email, setEmail] = useState('');
     const [username, setUsername] = useState('');
@@ -57,7 +57,7 @@ const RegisterForm = () => {
                         <Button type='submit' bgColor={"#0078d7"} color={"white"} _hover={{ bg: "#0078d7" }}>Register</Button>
                     </Center>
                 </form>
-                <Button variant='link' bgColor={"white"} size="lg" color={"#0078d7"}>Already have an account? Login here.</Button>
+                <Button variant='link' bgColor={"white"} size="lg" color={"#0078d7"} onClick={() => props.onFormSwitch('login')}>Already have an account? Login here.</Button>
             </Stack>
         </Box>
     );

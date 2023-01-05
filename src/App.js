@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { ChakraProvider, extendTheme } from '@chakra-ui/react';
 import BoxForm from './components/Outline';
+import LoginForm from './components/Login';
 import "./index.css";
 
 const theme = extendTheme({

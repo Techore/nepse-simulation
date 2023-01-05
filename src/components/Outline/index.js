@@ -1,18 +1,17 @@
 import React from 'react';
 import {
-    Container,
     Image,
     Flex,
     Text,
     Stack,
     Box,
     Center,
-    HStack,
     Divider,
     VStack,
 } from '@chakra-ui/react';
-
-import NEPSE_LOGO from './images/NEPSE.png'
+import LoginForm from '../Login';
+import RegisterForm from '../Register';
+import NEPSE_LOGO from './images/NEPSE.png';
 
 const BoxForm = () => {
     return (
@@ -31,7 +30,7 @@ const BoxForm = () => {
                     <Stack direction={"row"} h='100px'>
                         <Box>
                             <Image
-                                alt={'Techore Solutions'}
+                                alt={'NEPSE'}
                                 borderRadius='full'
                                 objectFit='cover'
                                 align={'center'}
@@ -49,6 +48,9 @@ const BoxForm = () => {
                             </VStack>
                         </Center>
                     </Stack>
+
+                    <RegisterForm />
+                    {/* <LoginForm /> */}
                 </Box>
             </Center>
         </Flex >

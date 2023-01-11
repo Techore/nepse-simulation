@@ -10,18 +10,23 @@ import {
     Input,
     Button,
     Heading,
+    Link,
 } from '@chakra-ui/react';
 
 
-const RegisterForm = (props) => {
+const RegisterForm = () => {
 
     const [email, setEmail] = useState('');
-    const [username, setUsername] = useState('');
+    const [firstname, setFirstname] = useState('');
+    const [lastname, setLastname] = useState('');
+    const [middlename, setMiddlename] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(email);
-        console.log(username);
+        console.log(firstname);
+        console.log(middlename);
+        console.log(lastname);
     }
 
     return (
@@ -32,15 +37,37 @@ const RegisterForm = (props) => {
                 </Center>
                 <form onSubmit={handleSubmit}>
                     <FormControl isRequired>
-                        <FormLabel fontSize={'20'} color={"#0078d7"}>USERNAME</FormLabel>
+                        <FormLabel fontSize={'20'} color={"#0078d7"}>FIRST NAME</FormLabel>
                         <Input
                             type='text'
                             width={"100%"}
-                            placeholder={"Username"}
+                            placeholder={"First Name"}
                             size='lg'
                             variant='filled'
-                            value={username}
-                            onChange={(e) => setUsername(e.target.value)} />
+                            value={firstname}
+                            onChange={(e) => setFirstname(e.target.value)} />
+                    </FormControl>
+                    <FormControl mt={10}>
+                        <FormLabel fontSize={'20'} color={"#0078d7"}>MIDDLE NAME</FormLabel>
+                        <Input
+                            type='text'
+                            width={"100%"}
+                            placeholder={"Middle Name"}
+                            size='lg'
+                            variant='filled'
+                            value={middlename}
+                            onChange={(e) => setMiddlename(e.target.value)} />
+                    </FormControl>
+                    <FormControl mt={10} isRequired>
+                        <FormLabel fontSize={'20'} color={"#0078d7"}>LAST NAME</FormLabel>
+                        <Input
+                            type='text'
+                            width={"100%"}
+                            placeholder={"Last Name"}
+                            size='lg'
+                            variant='filled'
+                            value={lastname}
+                            onChange={(e) => setLastname(e.target.value)} />
                     </FormControl>
                     <FormControl mt={10} isRequired>
                         <FormLabel fontSize={'20'} color={"#0078d7"}>EMAIL</FormLabel>
@@ -54,10 +81,10 @@ const RegisterForm = (props) => {
                         />
                     </FormControl>
                     <Center mt={10} mb={"5"}>
-                        <Button type='submit' bgColor={"#0078d7"} color={"white"} _hover={{ bg: "#0078d7" }}>Register</Button>
+                        <Button type='submit' bgColor={"#0078d7"} color={"white"} _hover={{ bg: "#0078d7" }} onClick={handleSubmit}>Register</Button>
                     </Center>
                 </form>
-                <Button variant='link' bgColor={"white"} size="lg" color={"#0078d7"} onClick={() => props.onFormSwitch('login')}>Already have an account? Login here.</Button>
+                <Button as={Link} variant='link' bgColor={"white"} size="lg" color={"#0078d7"} href="https://www.google.com/">Already have an account? Login here.</Button>
             </Stack>
         </Box>
     );

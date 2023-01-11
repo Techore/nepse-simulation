@@ -30,7 +30,7 @@ const RegisterForm = () => {
     }
 
     return (
-        <Box mt={20}>
+        <Box>
             <Stack spacing={5}>
                 <Center mb={10}>
                     <Heading color={"#0078d7"}>Register</Heading>
@@ -47,7 +47,7 @@ const RegisterForm = () => {
                             value={firstname}
                             onChange={(e) => setFirstname(e.target.value)} />
                     </FormControl>
-                    <FormControl mt={10}>
+                    <FormControl mt={5}>
                         <FormLabel fontSize={'20'} color={"#0078d7"}>MIDDLE NAME</FormLabel>
                         <Input
                             type='text'
@@ -58,7 +58,7 @@ const RegisterForm = () => {
                             value={middlename}
                             onChange={(e) => setMiddlename(e.target.value)} />
                     </FormControl>
-                    <FormControl mt={10} isRequired>
+                    <FormControl mt={5} isRequired>
                         <FormLabel fontSize={'20'} color={"#0078d7"}>LAST NAME</FormLabel>
                         <Input
                             type='text'
@@ -69,7 +69,7 @@ const RegisterForm = () => {
                             value={lastname}
                             onChange={(e) => setLastname(e.target.value)} />
                     </FormControl>
-                    <FormControl mt={10} isRequired>
+                    <FormControl mt={5} isRequired>
                         <FormLabel fontSize={'20'} color={"#0078d7"}>EMAIL</FormLabel>
                         <Input
                             type='email'
@@ -86,7 +86,7 @@ const RegisterForm = () => {
                 </form>
                 <Button as={Link} variant='link' bgColor={"white"} size="lg" color={"#0078d7"} href="https://www.google.com/">Already have an account? Login here.</Button>
             </Stack>
-        </Box>
+        </Box >
     );
 };
 

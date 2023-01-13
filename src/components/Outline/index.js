@@ -1,4 +1,4 @@
-import { React, useState } from 'react';
+import { React } from 'react';
 import {
     Image,
     Flex,
@@ -9,31 +9,25 @@ import {
     Divider,
     VStack,
 } from '@chakra-ui/react';
-import LoginForm from '../Login';
 import RegisterForm from '../Register';
 import NEPSE_LOGO from './images/NEPSE.png';
 
 const BoxForm = () => {
-    const [currentForm, setCurrentForm] = useState('login');
-
-    const toggleForm = (formname) => {
-        setCurrentForm(formname);
-    }
 
     return (
-        <Flex width={"100vw"} height={"100vh"} alignContent={"center"} justifyContent={"center"}>
+        <Flex minWidth={"100vw"} minHeight={"100vh"} alignContent={"center"} justifyContent={"center"}>
             <Center>
                 <Box
                     bgColor={"white"}
                     boxShadow='xl'
                     rounded='xl'
                     p={{ base: 5, sm: 5, md: 5, lg: 6, xl: 6 }}
-                    m={{ base: 4, sm: 4, md: 16, lg: 25, xl: 25 }}
+                    m={{ base: 0, sm: 4, md: 16, lg: 25, xl: 25 }}
                     mb={'15px'}
                     minHeight="85vh"
                     minWidth={{ lg: 600, xl: 600 }}
                 >
-                    <Stack direction={"row"} h='100px'>
+                    <Stack direction={"row"} h='100px' mb={{ base: 5, sm: 10, md: 10, lg: 10, xl: 10 }}>
                         <Box>
                             <Image
                                 alt={'NEPSE'}
@@ -54,8 +48,7 @@ const BoxForm = () => {
                             </VStack>
                         </Center>
                     </Stack>
-                    {currentForm === "login" ? <LoginForm onFormSwitch={toggleForm} /> : <RegisterForm onFormSwitch={toggleForm} />}
-                    {console.log(currentForm)}
+                    <RegisterForm />
                 </Box>
             </Center>
         </Flex >

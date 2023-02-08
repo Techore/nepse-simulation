@@ -1,20 +1,32 @@
-### `npm start`
+# REDA WEBSITE
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This is the website for NEPSE simulation login and register.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Architecture Notes
+------------------
+* The frontend is written in React JS
 
-### `npm test`
+### Requirements
+--------------------------
+* Node
+* npm (v9.2.0)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### How to run 
+--------------------------
+```bash
+npm install
+npm start
+```
 
-### `npm run build`
+You can go to `localhost:3000` to access the frontend application.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### For production
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+`npm run build`
+```
+
+### Notes for the contributors
+------------------------------
+* To add any new feature please fork the repo and create a Pull Request with main
+* If you find any bug please create a issue in the Github repo. For other security issue you can contact at `karkiaabishkar@gmail.com`
